@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Maine Grouse Field Guide&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="A clean, interactive guide to ruffed grouse habitat, seasons, strategy, dog work, and safety in Maine." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0b0c10;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card:#0f1117;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#8a93a7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:#e6e9f2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#7c9cff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent-2:#a3ffd6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ring:rgba(124,156,255,.45);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--maxw:1100px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow:0 10px 30px rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (prefers-color-scheme: light){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--bg:#f6f8ff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--card:#fff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--muted:#5a6175;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--text:#182033;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--accent:#3459ff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--accent-2:#00c48c;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--ring:rgba(52,89,255,.28);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>--shadow:0 10px 30px rgba(20,26,60,.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html,body{height:100%}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(1200px 600px at 80% -10%,rgba(124,156,255,.12),transparent 60%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(900px 500px at 0% 20%,rgba(163,255,214,.10),transparent 60%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit;text-decoration:none}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container{width:min(100%,var(--maxw));margin:0 auto;padding:0 20px}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:sticky;top:0;z-index:10;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter:saturate(180%) blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb,var(--bg),transparent 12%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid color-mix(in srgb,var(--text),transparent 92%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.brand{display:inline-flex;align-items:center;gap:10px;font-weight:700}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.brand-logo{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:28px;height:28px;border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--accent),var(--accent-2));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.links{display:flex;gap:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.links a{padding:8px 12px;border-radius:10px;opacity:.9}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.links a:hover{background:color-mix(in srgb,var(--text),transparent 92%);opacity:1}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mobile-toggle{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid color-mix(in srgb,var(--text),transparent 85%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:transparent;color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 10px;border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:860px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.links{display:none}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.mobile-toggle{display:inline-flex}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.mobile-menu{display:none}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.mobile-menu.open{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display:grid;gap:12px;padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-bottom:1px solid color-mix(in srgb,var(--text),transparent 90%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.mobile-menu a{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding:10px 12px;border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background:color-mix(in srgb,var(--text),transparent 92%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero{padding:72px 0 28px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.eyebrow{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex;gap:8px;align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:6px 10px;border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb,var(--text),transparent 92%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.eyebrow i{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:6px;height:6px;border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 0 0 4px color-mix(in srgb,var(--accent),transparent 70%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(34px,5.2vw,52px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.08;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:14px 0 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:-.02em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>p.lede{margin:0 0 22px;font-size:clamp(16px,2.2vw,18px);color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-row{display:flex;gap:12px;flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex;align-items:center;gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 16px;border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:600;cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--accent),var(--accent-2));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#0a0a0a;box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn.ghost{border-color:color-mix(in srgb,var(--text),transparent 85%)}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>section{padding:46px 0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title{font-size:22px;margin:0 0 18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:980px){.grid{grid-template-columns:1fr 1fr}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:640px){.grid{grid-template-columns:1fr}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid color-mix(in srgb,var(--text),transparent 92%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.two-col{display:grid;gap:16px;grid-template-columns:1fr 1fr}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:860px){.two-col{grid-template-columns:1fr}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Habitats */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chip{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid color-mix(in srgb,var(--text),transparent 86%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 12px;border-radius:999px;cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chip[aria-pressed="true"]{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb,var(--accent),transparent 82%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.habitat{padding:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.habitat .shot{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;height:180px;border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid color-mix(in srgb,var(--text),transparent 88%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>object-fit:cover;display:block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color-mix(in srgb,var(--accent),transparent 65%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color-mix(in srgb,var(--accent-2),transparent 65%));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer{padding:28px 0 60px;color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-row{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="brand" href="#home" aria-label="Home"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="brand-logo" aria-hidden="true"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;Grouse Guide&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="links" aria-label="Primary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#strategy"&gt;Strategy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#habitats"&gt;Habitats&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#seasons"&gt;Seasons&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#dog"&gt;Dog Work&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#ethics"&gt;Safety&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu"&gt;Menu&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="mobile-menu" class="container mobile-menu" role="menu" aria-label="Mobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a role="menuitem" href="#strategy"&gt;Strategy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a role="menuitem" href="#habitats"&gt;Habitats&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a role="menuitem" href="#seasons"&gt;Seasons&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a role="menuitem" href="#dog"&gt;Dog Work&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a role="menuitem" href="#ethics"&gt;Safety&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main id="home" class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="eyebrow"&gt;&lt;i&gt;&lt;/i&gt; Maine ruffed grouse&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1&gt;Read a cover. Move like wind. Expect the flush.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="lede"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>A fast, no-nonsense field guide built from the basics: young forest, edges, and quiet feet.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Use the filters, skim the cards, and take it to the woods.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cta-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn primary" href="#habitats"&gt;Start with habitats&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn ghost" href="#strategy"&gt;Hunt strategy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="strategy"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Strategy&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="two-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Wind &amp; Movement&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Work &lt;em&gt;into&lt;/em&gt; or across wind; slice likely objectives.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Pause at blowdowns, berry runs, alder tangles.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Two more steps after you think you’re past it.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Reading Sign&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Tracks and droppings on skid roads tell time and direction.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Bud-clipped twigs at head height = active feed.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Shadow the shady side early season; conifer edges late.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="habitats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Habitats&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="chipbar" role="toolbar" aria-label="Habitat filters"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="aspen" aria-pressed="false"&gt;Aspen/Poplar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="alder" aria-pressed="false"&gt;Alder/Drains&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="spruce" aria-pressed="false"&gt;Spruce/Fir&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="edge" aria-pressed="false"&gt;Edges&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="midday" aria-pressed="false"&gt;Midday&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="chip" data-tag="roost" aria-pressed="false"&gt;Roost&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid" id="habitatGrid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="seasons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Seasons &amp; Timing&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="two-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Early season (leaves on)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Focus on loud edges and obvious regen.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Creeks and seeps = cooler air + bugs.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Expect tight holds and quick shots.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Late season (leaves down / snow)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Thermal cover near feed: spruce/fir edges by birch/aspen.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Midday sun on south faces; birds loaf there.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Slow, methodical dog work wins.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="dog"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Dog Work&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="two-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Reading your dog&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Tail metronome → scent cone hit.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Crabbing cross-wind → working cone edge.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Frozen / slow ratchet → bird close; get ready.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 style="margin-top:0"&gt;Handler pace&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Match range to cover. Thick = slower.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Pause on objectives; create safe lanes.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Let the dog solve; you set angles.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="ethics"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="section-title"&gt;Safety &amp; Ethics&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card" style="padding:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Know your target and what’s beyond. No low shots over dogs.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Eye/ear protection; orange for every human.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Respect landowners; pack out trash.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Mind season dates, bag limits, and private land rules in Maine.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container footer-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;© &lt;span id="year"&gt;&lt;/span&gt; Grouse Guide • Maine&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#home"&gt;Back to top ↑&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// --- Header / navigation ---</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const toggle = document.querySelector('.mobile-toggle');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const menu = document.getElementById('mobile-menu');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (toggle &amp;&amp; menu) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>toggle.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const open = menu.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>toggle.setAttribute('aria-expanded', open ? 'true' : 'false');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('a[href^="#"]').forEach(a =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>a.addEventListener('click', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const id = a.getAttribute('href');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const el = id &amp;&amp; document.querySelector(id);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!el) return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>el.scrollIntoView({ behavior: 'smooth', block: 'start' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>menu &amp;&amp; menu.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Footer year</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('year').textContent = new Date().getFullYear();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// --- Habitat data ---</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const HABITATS = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Young Aspen/Poplar Regen (5–20 yrs)',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['aspen','edge'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Broom-handle stems, high stem density, nearby softwood for winter. Classic flush cover.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Work cross-wind along the edge.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Pause at blowdowns and berry runs.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Watch for tracks/droppings on skid roads.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'aspen',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'Young aspen regeneration with dense stems in Maine'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Alder Runs &amp; Wet Bottoms',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['alder','midday'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Bugs, shade, and soft soils. Good on warm days and early season.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Trace the green seams parallel to water.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Hit intersections of alder with hardwood regen.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Expect tight-holding birds; shots are quick.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'alder',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'Alder thicket along a wet drainage'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Spruce/Fir Islands Next to Hardwoods',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['spruce','roost'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Thermal cover and roost trees near feed (birch/aspen buds). Late-season money.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Hunt edges during midday sun.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Check leeward sides when windy.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Slow your dog; let them sort the cone.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'spruce',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'Spruce and fir mix in winter cover'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Old Logging Roads &amp; Cuts',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['edge','midday'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Travel lanes with food on both sides. Birds cross, loaf, and dust here.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Still-hunt the shady side.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Work junctions and fresh skidder berms.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Stop. Wait. Then take two more steps.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'logging-road',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'Old logging road bordered by young growth'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Mixed Hardwood Edges',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['edge'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Transition lines between age classes. Birds love contrast and cover.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Run the seam, not the middle.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Probe “points” and inward corners.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Angle across wind to slice objectives.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'mixed-hardwood',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'Mixed hardwood edge with contrasting ages'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title:'Snowy South Faces',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tags:['spruce','roost','midday'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>blurb:'Sun-warmed pockets where birds loaf and bud. Look for tracks and droppings.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>how:[</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Track first, then set up a cross-wind approach.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Scan for bud-clipped twigs at head height.',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Expect delayed flushes from tight cover.'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>file:'south-face',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alt:'South-facing slope with conifers and snow'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const grid = document.getElementById('habitatGrid');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Render all habitat cards</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function render(cards){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid.innerHTML = cards.map(h =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card habitat" data-tags="${(h.tags||[]).join(' ')}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img</p>
+<p class="p1"><span class="Apple-converted-space">            </span>class="shot"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>data-file="${h.file||''}"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>data-title="${h.title}"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>data-tags="${(h.tags||[]).join(',')}"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alt="${h.alt || ''}"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loading="lazy"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;${h.title}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;${h.blurb}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;summary&gt;How to work it&lt;/summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;${h.how.map(x=&gt;`&lt;li&gt;${x}&lt;/li&gt;`).join('')}&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/details&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('img.shot').forEach(img =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setImgSrc(img, {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>file: img.dataset.file,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: img.dataset.title,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>tags: (img.dataset.tags || '').split(',').filter(Boolean)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Image resolver — tries multiple filename patterns, including GitHub's weird "images:aspen.jpeg"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setImgSrc(img, meta){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const toSlug = (s) =&gt; (s || '')</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.toLowerCase()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.replace(/&amp;/g,' and ')</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.replace(/[^a-z0-9]+/g,'-')</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.replace(/^-+|-+$/g,'');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const bases = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (meta.file) bases.push(meta.file);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>(meta.tags || []).forEach(t =&gt; { bases.push(t, toSlug(t)); });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bases.push(toSlug(meta.title));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const seen = new Set();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const uniqueBases = bases.filter(b =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!b) return false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (seen.has(b)) return false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>seen.add(b);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const makeVariants = (base) =&gt; [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/${base}.jpg`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/${base}.jpeg`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/images:${base}.jpg`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/images:${base}.jpeg`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/images/${base}.jpg`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`images/images/${base}.jpeg`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const variants = uniqueBases.flatMap(makeVariants);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const placeholder = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>img.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ph = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>ph.className = 'shot';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>img.parentElement.insertBefore(ph, img);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>let i = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tryNext = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (i &gt;= variants.length) { placeholder(); return; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const candidate = variants[i++];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const probe = new Image();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>probe.onload = () =&gt; { img.src = candidate; };</p>
+<p class="p1"><span class="Apple-converted-space">        </span>probe.onerror = tryNext;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>probe.src = candidate;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tryNext();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Filter chips</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const chips = document.querySelectorAll('.chip');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let active = new Set();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>chips.forEach(chip =&gt; chip.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tag = chip.dataset.tag;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const pressed = chip.getAttribute('aria-pressed') === 'true';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chip.setAttribute('aria-pressed', pressed ? 'false' : 'true');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pressed ? active.delete(tag) : active.add(tag);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>applyFilter();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function applyFilter(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const cards = Array.from(grid.children);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (active.size === 0){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cards.forEach(c =&gt; c.style.display = 'grid');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cards.forEach(c =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tags = (c.dataset.tags || '').split(' ').filter(Boolean);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const show = [...active].every(t =&gt; tags.includes(t));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>c.style.display = show ? 'grid' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Minimal self-check in console</p>
+<p class="p1"><span class="Apple-converted-space">    </span>(function selfTest(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>console.assert(/20\d{2}/.test(document.getElementById('year').textContent), 'Footer year not set');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Kick everything off</p>
+<p class="p1"><span class="Apple-converted-space">    </span>render(HABITATS);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
